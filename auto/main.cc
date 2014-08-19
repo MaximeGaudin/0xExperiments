@@ -3,14 +3,16 @@
 #include <utility>
 #include <string>
 
+using namespace std;
+
 int main ( ) {
-  std::map < std::string, std::string > alias;
-  alias.insert ( std::pair < std::string, std::string > ( "ll", "ls -al" ) );
-  alias.insert ( std::pair < std::string, std::string > ( "sl", "ls" ) );
+  map < string, string > alias;
+  alias.insert ( pair < string, string > ( "ll", "ls -al" ) );
+  alias.insert ( pair < string, string > ( "sl", "ls" ) );
 
   auto it = alias.begin();
   while ( it != alias.end() ) {
-    std::cout << it->first << " ~ " << it->second << std::endl;
+    cout << it->first << " ~ " << it->second << endl;
     ++it;
   }
 
